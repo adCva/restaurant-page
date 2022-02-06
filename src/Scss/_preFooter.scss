@@ -1,0 +1,36 @@
+.preFooter-container {
+    background: url("../Assets/ready-bg-mobile.jpg") center/cover no-repeat;
+    width: 100%;
+    height: calc(656px / 2);
+    object-fit: cover;
+    color: $light-text;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media (min-width: 768px) {
+        background: url("../Assets/ready-bg-tablet.jpg") center/cover no-repeat;
+        height: calc(544px / 2);
+    }
+
+    @media (min-width: 1300px) {
+        background: url("../Assets/ready-bg-desktop.jpg") center/cover no-repeat;
+        height: calc(480px / 2);
+    }
+
+
+
+
+    h2 {
+        font-size: 1.8rem;
+        font-weight: $fw-extra-bold;
+        line-height: 1.3;
+        margin-bottom: 1rem;
+
+        @media (min-width: 768px) {
+            font-size: 2rem;
+        }
+    }
+}

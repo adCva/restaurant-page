@@ -1,0 +1,159 @@
+.highlights-wrapper {
+    background-color: $dark-bg;
+    color: $light-text;
+    padding: 3rem 0;
+
+    .highlights-container {
+        width: 85%;
+        max-width: 1300px;
+        margin: 0 auto;
+
+        @media (min-width: 1200px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 2rem;
+            padding: 5rem 0 3rem;
+        }
+
+
+        .highlights-desc {
+            text-align: center;
+
+            @media (min-width: 768px) {
+                width: 450px;
+                margin: 0 auto;
+            }
+            @media (min-width: 1200px) {
+                text-align: left;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+                font-weight: $fw-bold;
+                line-height: 1.25;
+                letter-spacing: -0.4px;
+                margin: 2rem 0 1rem;
+
+                @media (min-width: 360px) {
+                    font-size: 2rem;
+                }
+                @media (min-width: 540px) {
+                    font-size: 2.5rem;
+                }
+                @media (min-width: 768px) {
+                    font-size: 2.7rem;
+                }
+                @media (min-width: 1200px) {
+                    font-size: 2.5rem;
+                    margin: 2rem 0 1.5rem;
+                }
+            }
+
+            p {
+                font-size: 15px;
+                font-weight: $fw-regular;
+                line-height: 1.7;
+                letter-spacing: -0.2px;
+
+                @media (min-width: 768px) {
+                    font-size: 18px;
+                }
+
+                @media (min-width: 1200px) {
+                    font-size: 16.5px;
+                }
+            }
+        }
+
+
+
+
+        .highlights-products {
+            margin-top: 2rem;
+
+            @media (min-width: 768px) {
+                margin-top: 3rem;
+            }
+            @media (min-width: 1200px) {
+                margin-top: 0;
+            }
+
+            .product-card {
+                text-align: center;
+                padding: 2rem 0;
+                border-bottom: 1px solid rgba(204, 204, 204, 0.3);
+
+                &:last-of-type {
+                    border-bottom: none;
+                }
+
+                @media (min-width: 768px) {
+                    display: flex;
+                    gap: 3rem;
+                    text-align: left;
+                    width: 550px;
+                    margin: 0 auto;
+                    padding: 1.5rem 0;
+                }
+                @media (min-width: 1200px) {
+                    width: 650px;
+                    gap: 5rem;
+                    padding: 1.5rem 2rem;
+                }
+
+                picture {
+                    @media (min-width: 768px) {
+                        position: relative;
+
+                        &:before {
+                            content: "";
+                            display: block;
+                            height: 1.5px;
+                            width: 30px;
+                            background-color: #9e7f66;
+                            position: absolute;
+                            top: 35%;
+                            right: -23%;
+                        }
+                    }
+
+                    @media (min-width: 1200px) {
+                        &:before {
+                            top: 45%;
+                            right: -25%;
+                        }
+                    }
+                }
+
+                img {
+                    width: 100%;
+                    margin-bottom: 2rem;
+
+                    @media (min-width: 768px) {
+                        width: 130px;
+                        margin-bottom: 0;
+                    }
+                    @media (min-width: 1200px) {
+                        width: 120px;
+                    }
+                }
+
+                h3 {
+                    font-size: 1.1rem;
+                    font-weight: $fw-bold;
+                    line-height: 1.5;
+                    letter-spacing: -0.2px;
+                    margin-bottom: 0.5rem;
+                }
+
+                p {
+                    font-size: 15px;
+                    font-weight: $fw-regular;
+                    line-height: 1.7;
+                    letter-spacing: -0.2px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+.footer-container {
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 4rem 0;
+    text-align: center;
+    transition: all 0.25s ease-in-out;
+
+
+    @media (min-width: 1300px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 4rem 0;
+    }
+
+
+
+    .footer-group {
+        line-height: 2;
+
+        p{
+            font-size: 14px;
+        }
+
+        &:first-of-type {
+            margin: 3rem 0;
+        }
+
+        @media (min-width: 1200px) {
+            &:first-of-type {
+                margin: 0;
+            }
+        }
+    }
+}
