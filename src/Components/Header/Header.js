@@ -9,7 +9,7 @@ function Header(props) {
           <img src="./images/logo.svg" alt="Logo" />
           <h1 className="header-title">{props.title}</h1>
           <p className="header-description">{props.description}</p>
-          <Button text="book a table" dark={false}/>
+          <Button text="book a table" dark={false} destination="reservation" />
         </div>
       </div>
   );

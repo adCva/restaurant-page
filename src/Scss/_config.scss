@@ -27,3 +27,9 @@ $fw-extra-bold: 800;
     max-width: 1400px;
     margin: 0 auto;
 }
+
+@mixin width-mixinn {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+}

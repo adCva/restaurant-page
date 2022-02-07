@@ -1,37 +1,37 @@
 import React from 'react';
+import Button from '../Button';
 
 function MainRSV() {
   return (
         <div className="main-rsv-wrapper">
             <div className="main-rsv-container">
-                <img src="./images/logo.svg" alt="Logo" />
+                <img src="./images/logo.svg" alt="Logo" className="logo"/>
 
                 <div className="main-rsv-content">
                     {/* ====================================== Main Text ====================================== */}
                     <div className="main-rsv-content-text">
-                        <h1>reservation</h1>
+                        <h1>Reservations</h1>
                         <p>We can’t wait to host you. If you have any special requirements please feel free to call on the phone number below. We’ll be happy to accommodate you.</p>
+                        <Button dark={false} text="back home" destination="/"/>
                     </div>
 
                     {/* ====================================== Form ====================================== */}
-                    <form>
+                    <form onSubmit={() => alert("nope")}>
                         {/* =================== Name =================== */}
                         <div className="form-group">
-                            <label for="name">Name</label>
-                            <input className="input-box-text" type="text" name="name" placeholder="Name" />
+                            <input type="text" name="name" placeholder="Name" />
                             <p className="error-msg">This field is required</p>
                         </div>
                         {/* =================== Email =================== */}
                         <div className="form-group">
-                            <label for="email">Email</label>
-                            <input className="input-box-email" type="email" name="email" placeholder="Email" />
+                            <input type="email" name="email" placeholder="Email" />
                             <p className="error-msg">This field is required</p>
                         </div>
                         {/* =================== Date =================== */}
-                        <div className="form-group-date">
+                        <div className="form-group-dateTime">
                             <div className="group-desc">
                                 <p className="box-label">Pick a date</p>
-                                <p className="error-msg">This field is required</p>
+                                <p className="error-msg error-msg-dateTime">This field is required</p>
                             </div>
                             <div className="date-inputs-container">
                                 <input className="date-input" type="number" name="day" placeholder="DD" />
@@ -40,10 +40,10 @@ function MainRSV() {
                             </div>
                         </div>
                         {/* =================== Time =================== */}
-                        <div className="form-group-date">
+                        <div className="form-group-dateTime">
                             <div className="group-desc">
                                 <p className="box-label">Pick a time</p>
-                                <p className="error-msg">This field is required</p>
+                                <p className="error-msg error-msg-dateTime">This field is required</p>
                             </div>
                             <div className="date-inputs-container">
                                 <input className="date-input" type="number" name="day" placeholder="20" />
@@ -52,16 +52,16 @@ function MainRSV() {
                         </div>
                         {/* =================== People =================== */}
                         <div className="people-select">
-                            <button>-</button>
+                            <button type="button">-</button>
                             <p>2 people</p>
-                            <button>+</button>
+                            <button type="button">+</button>
                         </div>
 
                         {/* ====================================== Submit ====================================== */}
-                        <button type="submit" className="submit-btn">make a reservation</button>
+                        <button type="submit" className="submit-btn">make reservation</button>
                     </form>
                 </div>
-                
+
             </div>
         </div>
   );

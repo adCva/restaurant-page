@@ -38,6 +38,20 @@ footer {
 }
 
 
+.decoration-wrapper {
+    height: 550px;
+    
+
+    @media (min-width: 768px) { 
+        height: 450px;
+    }
+
+    @media (min-width: 1100px) { 
+        height: 350px;
+    }
+}
+
+
 
 
 

@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 function Button(props) {
   return (
-        <button className={props.dark ? "btn btn-dark" : "btn"}>{props.text}</button>
+        <Link to={`${props.destination}`} className={props.dark ? "btn btn-dark" : "btn"}>{props.text}</Link>
   );
 }
 
