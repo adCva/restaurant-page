@@ -1,0 +1,11 @@
+.main-rsv-wrapper {
+    background: url("../Assets/ready-bg-mobile.jpg") bottom/cover no-repeat;
+    height: 50vh;
+
+    @media (min-width: 768px) {
+        background: url("../Assets/ready-bg-tablet.jpg") center/cover no-repeat; 
+    }
+    @media (min-width: 1200px) {
+        background: url("../Assets/ready-bg-desktop.jpg") center/cover no-repeat; 
+    }
+}

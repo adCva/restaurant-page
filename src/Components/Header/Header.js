@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import Button from '../Button';
 
 function Header(props) {
   return (
@@ -8,7 +9,7 @@ function Header(props) {
           <img src="./images/logo.svg" alt="Logo" />
           <h1 className="header-title">{props.title}</h1>
           <p className="header-description">{props.description}</p>
-          <button className="header-btn">book a table</button>
+          <Button text="book a table" dark={false}/>
         </div>
       </div>
   );

@@ -63,29 +63,44 @@
                 text-align: left;
             }
 
-            h2 {
-                font-size: 28px;
-                font-weight: $fw-bold;
-                line-height: 1.3;
-                letter-spacing: -0.4px;
-                margin-top: 1.5rem;
-            }
+            .gatherings-info {
+                @media (min-width: 768px) {
+                    width: 500px;
+                    margin: 0 auto;
+                }
 
-            p {
-                margin: 1.5rem 0 3rem;
-                font-size: 1rem;
-                letter-spacing: -0.2px;
-                line-height: 1.5;
-            }
+                h2 {
+                    font-size: 28px;
+                    font-weight: $fw-bold;
+                    line-height: 1.3;
+                    letter-spacing: -0.4px;
+                    margin-top: 1.5rem;
+                }
+    
+                p {
+                    margin: 1.5rem 0 3rem;
+                    font-size: 1rem;
+                    letter-spacing: -0.2px;
+                    line-height: 1.5;
+                }
+    
+                .gatherings-btn {
+                    background-color: $extra-dark-bg;
+                    color: $light-text;
+                    border: 2px solid transparent;
+                    font-weight: $fw-medium;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    padding: 1.7rem 4rem;
+                    cursor: pointer;
+                    transition: all 0.25s ease-in-out;
 
-            .gatherings-btn {
-                background-color: $extra-dark-bg;
-                color: $light-text;
-                font-weight: $fw-medium;
-                letter-spacing: 2px;
-                text-transform: uppercase;
-                padding: 1.7rem 0;
-                cursor: pointer;
+                    &:hover {
+                        background: transparent;
+                        border: 2px solid $extra-dark-bg;
+                        color: $extra-dark-bg;
+                    }
+                }
             }
 
 
@@ -101,6 +116,7 @@
                     flex-direction: column;
                     align-items: flex-start;
                     order: 1;
+                    margin-top: 5rem;
                 }
                 button {
                     background: transparent;
@@ -112,6 +128,7 @@
                     text-transform: uppercase;
                     cursor: pointer;
                     transition: all 0.25s ease-in-out;
+                    margin-bottom: 1rem;
                 }
 
                 .btn-active {

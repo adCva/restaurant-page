@@ -2,9 +2,7 @@ import React from 'react';
 
 function Button(props) {
   return (
-        <button className="btn">
-            {props.text}
-        </button>
+        <button className={props.dark ? "btn btn-dark" : "btn"}>{props.text}</button>
   );
 }
 

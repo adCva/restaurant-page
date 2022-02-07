@@ -1,0 +1,41 @@
+.btn {
+    background: transparent;
+    color: $light-text;
+    padding: 1.3rem 3.5rem;
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 1.4;
+    letter-spacing: 2px;
+    border: 1px solid $light-text;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+
+    &:hover {
+        background: $light-bg;
+        color: $dark-text;
+    }
+
+    &:focus {
+        background: $light-bg;
+        color: $dark-text;
+    }
+}
+
+
+.btn-dark {
+    background: $dark-bg;
+    color: $light-text;
+    border: 1px solid transparent;
+
+    &:hover {
+        background: $light-bg;
+        color: $dark-text;
+        border: 1px solid $light-text;
+    }
+
+    &:focus {
+        background: $light-bg;
+        color: $dark-text;
+        border: 1px solid $light-text;
+    }
+}
