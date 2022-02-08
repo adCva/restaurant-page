@@ -6,7 +6,7 @@ function PreFooter() {
       <div className="preFooter-wrapper">
           <div className="preFooter-container">
               <h2>Ready to make a reservation?</h2>
-              <Button text="book a table" dark={false} destination="reservation" />
+              <Button text="book a table" dark={false} destination="booking" />
           </div>
       </div>
   );

@@ -10,7 +10,7 @@ function App() {
     <BrowserRouter  className="App">
       <Routes>
         <Route exact path="/" element={<Home />}/>
-        <Route path="/reservation" element={<Booking />}/>
+        <Route path="/booking" element={<Booking />}/>
       </Routes>
     </BrowserRouter>
   );

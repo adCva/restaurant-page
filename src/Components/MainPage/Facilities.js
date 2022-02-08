@@ -62,7 +62,7 @@ function Facilities() {
                     <div className="facilities-info">
                         <h2>{activeInfo.title}</h2>
                         <p>{activeInfo.description}</p>
-                        <Button text="book a table" dark={true} destination="reservation" />
+                        <Button text="book a table" dark={true} destination="booking" />
                     </div>
                 </div>
 

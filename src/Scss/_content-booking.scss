@@ -1,10 +1,10 @@
-.main-rsv-wrapper {
-    background: url("../Assets/ready-bg-mobile.jpg") bottom/cover no-repeat;
-    width: 100%;
+.booking-content-wrapper {
+    background: url("../Assets/ready-bg-mobile.jpg") top/cover no-repeat;
     height: 90vh;
 
     @media (min-width: 768px) {
         background: url("../Assets/ready-bg-tablet.jpg") center/cover no-repeat; 
+        height: 60vh;
     }
     @media (min-width: 1200px) {
         background: url("../Assets/ready-bg-desktop.jpg") center/cover no-repeat; 
@@ -12,167 +12,164 @@
     }
 
 
-    .main-rsv-container {
-        position: relative;
+
+
+    // ================================= Container
+    .booking-content-container {
+        @include width-1200;
         color: $light-text;
-        @include width-mixinn;
         text-align: center;
         padding-top: 4rem;
 
-        @media (min-width: 1200px) {
+        @media (min-width: 768px) {
             text-align: left;
         }
 
 
 
-        .main-rsv-content {
-            position: relative;
 
+        // ================================= Content Container
+        .booking-content {
             @media (min-width: 1200px) {
                 display: flex;
+                justify-content: space-between;
                 align-items: flex-start;
                 margin-top: 7rem;
-                
-            }
-
-            // =============================== Logo ===============================
-            .logo {
-
             }
 
 
 
 
-            // =============================== Main Text ===============================
-            .main-rsv-content-text {
-                margin: 2rem 0;
+            // ================================= Main Text
+            .booking-content-text {
+                margin: 3rem 0;
 
+                @media (min-width: 768px) {
+                    text-align: center;
+                    margin: 4rem 0 2rem;
+                }
+                @media (min-width: 1200px) {
+                    text-align: left;
+                    margin: 0;
+                }
 
                 h1 {
                     font-size: 2rem;
                     font-weight: $fw-light;
                     letter-spacing: -0.4px;
-                }
 
+                    @media (min-width: 768px) {
+                        font-size: 3rem;
+                    }
+                    @media (min-width: 1200px) {
+                        font-size: 3.5rem;
+                    }
+                }
 
                 p {
                     font-size: 0.93rem;
                     letter-spacing: -0.2px;
                     line-height: 1.7;
-                    margin: 1.5rem 0 2.5rem;
+                    margin: 1.5rem 0 3rem;
+
+                    @media (min-width: 768px) {
+                        font-size: 1.1rem;
+                        width: 530px;
+                        margin: 1.5rem auto 3rem;
+                    }
                 }
             }
 
 
 
 
-            // =============================== Form ===============================
-            form {
-                background-color: $light-bg;
-                padding: 2rem 1rem;
-                text-align: left;
-                box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-
-                @media (min-width: 768px) {
-                    width: 580px;
-                    margin: 0 auto;
-                }
-
+            // ================================= Form Container
+            .form-and-pattern {
                 @media (min-width: 1200px) {
-                    width: 850px;
+                    position: relative;
                 }
 
 
-                .error-msg {
-                    color: #B54949;
-                    font-size: 0.75rem;
-                    letter-spacing: -0.2px;
-                    margin-top: 0.7rem;
-                    padding-left: 0.8rem;
-                }       
-
-                .error-msg-dateTime {
-                    padding-left: 0;
-                }
 
 
-                // =========== Form Group
-                .form-group {
+                // ================================= Pattern
+                .form-pattern {
+                    display: none;
 
-                    &:first-of-type {
-                        margin-bottom: 1rem;
-                    }
-
-                    input {
-                        color: #5c6779;
-                        caret-color: #9e7f66;
-                        width: 100%;
-                        padding: 0 0.8rem 0.5rem;
-                        font-size: 1.15rem;
-                        font-weight: $fw-light;
-                        line-height: 1.5;
-                        letter-spacing: -0.2px;
-                        outline: none;
-                        border-bottom: 1px solid rgba(142, 142, 142, 0.5);
-                        cursor: pointer;
-                        transition: all 0.25s ease-in-out;
-
-                        &:hover {
-                            border-bottom: 1px solid $dark-text;
-                        }
-
-                        &:focus {
-                            border-bottom: 1px solid $dark-text;
-                        }
+                    @media (min-width: 1200px) {
+                        display: initial;
+                        position: absolute;
+                        bottom: -40px;
+                        left: -80px;
                     }
                 }
 
 
 
+                // ================================= Form
+                form {
+                    background-color: $light-bg;
+                    width: 280px;
+                    margin: 0 auto;
+                    padding: 2rem 1rem;
+                    text-align: left;
+                    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+                    position: relative;
+                    bottom: -50px;
 
-                // =========== Form Group Date & Time
-                .form-group-dateTime {
-                    margin: 2rem 0 0;
-
+                    @media (min-width: 360px) {
+                        width: 310px;
+                    }
+                    @media (min-width: 411px) {
+                        width: 350px;
+                    }
+                    @media (min-width: 540px) {
+                        width: 450px;
+                    }
                     @media (min-width: 768px) {
-                        display: flex;
-                        gap: 2rem;
+                        width: 550px;
                     }
                     @media (min-width: 1200px) {
-                        gap: 4rem;
-                    }
-
-                    .group-desc {
-                        margin-bottom: 1rem;
-
-                        .box-label {
-                            color: $dark-text;
-                            font-size: 1.2rem;
-                            font-weight: $fw-light;
-                            letter-spacing: -0.2px;
-                            line-height: 1.5;
-                        }
+                        width: 570px;
+                        padding: 3rem;
+                        bottom: 0;
                     }
 
 
-                    .date-inputs-container {
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        gap: 2rem;
 
-                        @media (min-width: 768px) {
-                            width: 70%;
-                        }
-                        @media (min-width: 1200px) {
-                            width: 60%;
+
+                    // =========== Error message
+                    .error-msg {
+                        display: none;
+                        color: #B54949;
+                        font-size: 0.75rem;
+                        letter-spacing: -0.2px;
+                        margin-top: 0.7rem;
+                        padding-left: 0.8rem;
+                    }       
+    
+                    .error-msg-dateTime {
+                        padding-left: 0;
+                    }
+
+                    .show-error-msg {
+                        display: block;
+                    }
+
+
+
+
+                    // =========== Form Group
+                    .form-group {
+                        &:first-of-type {
+                            margin-bottom: 1rem;
                         }
 
                         input {
-                            width: 100%;
                             color: #5c6779;
-                            caret-color: #9e7f66;
-                            text-align: center;
+                            caret-color: $gold;
+                            width: 100%;
+                            padding: 0 0.8rem 0.5rem;
                             font-size: 1.15rem;
                             font-weight: $fw-light;
                             line-height: 1.5;
@@ -190,67 +187,147 @@
                                 border-bottom: 1px solid $dark-text;
                             }
                         }
+
+                        .input-error {
+                            border-bottom: 1px solid #B54949;
+                        }
                     }
-                }
 
 
 
 
-                // =========== Select nr of people
-                .people-select {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    margin: 3rem 0 2rem;
-                    padding: 0.5rem 0.8rem;
-                    border-bottom: 1px solid rgba(142, 142, 142, 0.5);
+                    // =========== Form Group Date & Time
+                    .form-group-dateTime {
+                        margin: 2rem 0 0;
 
-                    button {
-                        background: transparent;
-                        color: #9e7f66;
-                        border: none;
-                        outline: none;
-                        font-size: 1.5rem;
-                        font-weight: $fw-bold;
+                        @media (min-width: 768px) {
+                            display: flex;
+                            gap: 2rem;
+                        }
+                        @media (min-width: 1200px) {
+                            gap: 4rem;
+                        }
+
+
+
+                        // ======= Group Description
+                        .group-desc {
+                            margin-bottom: 1rem;
+    
+                            .box-label {
+                                color: $dark-text;
+                                font-size: 1.2rem;
+                                font-weight: $fw-light;
+                                letter-spacing: -0.2px;
+                                line-height: 1.5;
+                            }
+                        }
+
+
+
+
+                        // =========== Date-Time input
+                        .date-inputs-container {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            gap: 2rem;
+    
+                            @media (min-width: 768px) {
+                                width: 70%;
+                            }
+                            @media (min-width: 1200px) {
+                                width: 60%;
+                            }
+    
+                            input {
+                                width: 100%;
+                                color: #5c6779;
+                                caret-color: #9e7f66;
+                                text-align: center;
+                                font-size: 1.15rem;
+                                font-weight: $fw-light;
+                                line-height: 1.5;
+                                letter-spacing: -0.2px;
+                                outline: none;
+                                border-bottom: 1px solid rgba(142, 142, 142, 0.5);
+                                cursor: pointer;
+                                transition: all 0.25s ease-in-out;
+        
+                                &:hover {
+                                    border-bottom: 1px solid $dark-text;
+                                }
+        
+                                &:focus {
+                                    border-bottom: 1px solid $dark-text;
+                                }
+                            }
+
+                            .input-error {
+                                border-bottom: 1px solid #B54949;
+                            }
+                        }
+                    }
+
+
+
+
+                    // =========== Select nr of people
+                    .people-select {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin: 3rem 0 2rem;
+                        padding: 0.5rem 0.8rem;
+                        border-bottom: 1px solid rgba(142, 142, 142, 0.5);
+    
+                        button {
+                            background: transparent;
+                            color: #9e7f66;
+                            border: none;
+                            outline: none;
+                            font-size: 1.5rem;
+                            font-weight: $fw-bold;
+                            cursor: pointer;
+                            transition: all 0.25s ease-in-out;
+                        }
+    
+                        p {
+                            color: #5c6779;
+                            font-size: 1.1rem;
+                            font-weight: $fw-semi-bold;
+                            letter-spacing: -0.2px;
+                        }
+                    }
+
+
+
+
+                    // =========== Submit btn
+                    .submit-btn {
+                        background: $dark-bg;
+                        color: $light-text;
+                        width: 100%;
+                        height: 65px;
+                        font-size: 0.7rem;
+                        text-transform: uppercase;
+                        line-height: 1.4;
+                        letter-spacing: 2px;
+                        border: 1px solid $light-text;
                         cursor: pointer;
                         transition: all 0.25s ease-in-out;
-                    }
-
-                    p {
-                        color: #5c6779;
-                        font-size: 1.1rem;
-                        font-weight: $fw-semi-bold;
-                        letter-spacing: -0.2px;
-                    }
-                }
-
-
-
-
-                // =========== Submit btn
-                .submit-btn {
-                    background: $dark-bg;
-                    color: $light-text;
-                    width: 100%;
-                    height: 65px;
-                    font-size: 0.7rem;
-                    text-transform: uppercase;
-                    line-height: 1.4;
-                    letter-spacing: 2px;
-                    border: 1px solid $light-text;
-                    cursor: pointer;
-                    transition: all 0.25s ease-in-out;
-                
-                    &:hover {
-                        background: transparent;
-                        color: $dark-text;
-                        border: 1px solid $dark-bg;
-                    }
-                
-                    &:focus {
-                        background: transparent;
-                        color: $dark-text;
-                        border: 1px solid $dark-bg;
+                    
+                        &:hover {
+                            background: transparent;
+                            color: $dark-text;
+                            border: 1px solid $dark-bg;
+                        }
+                    
+                        &:focus {
+                            background: transparent;
+                            color: $dark-text;
+                            border: 1px solid $dark-bg;
+                        }
                     }
                 }
             }
