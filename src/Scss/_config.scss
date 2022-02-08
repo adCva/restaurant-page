@@ -9,6 +9,9 @@ $dark-text: #111111;
 $dark-bg: #111111;
 $extra-dark-bg: #000000;
 
+// Other colors.
+$gold: #9e7f66;
+
 
 // Typography.
 $ff-main: 'Spartan', sans-serif;
@@ -24,11 +27,16 @@ $fw-extra-bold: 800;
 // General
 @mixin width-mixin {
     width: 85%;
-    max-width: 1400px;
+    max-width: 1300px;
     margin: 0 auto;
 }
 
 @mixin width-mixinn {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+@mixin width-1200{
     width: 85%;
     max-width: 1200px;
     margin: 0 auto;

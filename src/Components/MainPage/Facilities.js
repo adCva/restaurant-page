@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { useTransition, animated } from 'react-spring';
-import Button from './Button';
+import Button from '../Button';
 
-function Gatherings() {
+function Facilities() {
+    // ================== State
     const [ displayAbout, setDisplayAbout ] = useState("familyGathering");
     const [ activeInfo, setActiveInfo] = useState({
         title: "Family Gatherings",
@@ -11,16 +11,11 @@ function Gatherings() {
     });
 
 
-    const transition = useTransition(activeInfo, {
-        from: { opacity: 0 },
-        enter: { opacity: 1 },
-        leave: { opacity: 0 }
-    });
 
-
-    const changeInfo = (dataaa) => {
-        setDisplayAbout(dataaa);
-        switch(dataaa) {
+    // ================== Manage active info
+    const changeInfo = (about) => {
+        setDisplayAbout(about);
+        switch(about) {
             case "specialEvents":
                 setActiveInfo({
                     title: "Special Events",
@@ -46,31 +41,34 @@ function Gatherings() {
 
 
   return (
-        <div className="gatherings-wrapper">
-            <img src="./images/pattern-lines.svg" alt="Lines" className="lines-pattern"/>
-            <div className="gatherings-container">
-                <div>
+        <div className="facilities-wrapper">
+            <div className="facilities-container">
+                {/* ===================== Image & pattern decoration ===================== */}
+                <div className="facilities-pictures">
+                    <img src="./images/pattern-lines.svg" alt="Lines" className="lines-pattern"/>
                     <picture>
                         <source media="(min-width:1200px)" srcSet={`./images/${activeInfo.images[2]}`} />
                         <source media="(min-width:768px)" srcSet={`./images/${activeInfo.images[1]}`} />
-                        <img src={`./images/${activeInfo.images[0]}`} alt="Image" />
+                        <img src={`./images/${activeInfo.images[0]}`} alt="Image" className="info-img" />
                     </picture>
                 </div>
-                <div className="gatherings-card-info">
-                    <div className="gatherings-card-btns">
+                {/* ===================== Text Info ===================== */}
+                <div className="facilities-card-info">
+                    <div className="facilities-buttons">
                         <button onClick={() => changeInfo("familyGathering")} className={displayAbout === "familyGathering" ? "btn-active" : ""}>Family Gatherings</button>
                         <button onClick={() => changeInfo("specialEvents")} className={displayAbout === "specialEvents" ? "btn-active" : ""}>Special Events</button>
                         <button onClick={() => changeInfo("socialEvents")} className={displayAbout === "socialEvents" ? "btn-active" : ""}>Social Events</button>
                     </div>
-                    <div className="gatherings-info">
+                    <div className="facilities-info">
                         <h2>{activeInfo.title}</h2>
                         <p>{activeInfo.description}</p>
-                        <button className="gatherings-btn">book a table</button>
+                        <Button text="book a table" dark={true} destination="reservation" />
                     </div>
                 </div>
+
             </div>
         </div>
   );
 }
 
-export default Gatherings;
+export default Facilities;

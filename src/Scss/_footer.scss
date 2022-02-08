@@ -1,7 +1,5 @@
 .footer-container {
-    width: 90%;
-    max-width: 1300px;
-    margin: 0 auto;
+    @include width-mixinn;
     padding: 4rem 0;
     text-align: center;
     transition: all 0.25s ease-in-out;

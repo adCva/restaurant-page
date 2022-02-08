@@ -31,12 +31,12 @@
     &:hover {
         background: $light-bg;
         color: $dark-text;
-        border: 1px solid $light-text;
+        border: 1px solid $dark-bg;
     }
 
     &:focus {
         background: $light-bg;
         color: $dark-text;
-        border: 1px solid $light-text;
+        border: 1px solid $dark-bg;
     }
 }

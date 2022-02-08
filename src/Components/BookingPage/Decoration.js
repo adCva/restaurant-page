@@ -1,9 +1,9 @@
 import React from 'react';
 
-function DecorationSection() {
+function Decoration() {
   return (
         <div className="decoration-wrapper"></div>
   );
 }
 
-export default DecorationSection;
+export default Decoration;

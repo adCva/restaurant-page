@@ -1,10 +1,10 @@
 import React from 'react';
-import Header from "../Components/Header/Header";
-import About from '../Components/About';
-import Highlights from '../Components/Highlights';
-import Gatherings from '../Components/Gatherings';
-import PreFooter from '../Components/PreFooter/PreFooter';
-import Footer from '../Components/Footer/Footer';
+import Header from "../Components/MainPage/Header";
+import About from '../Components/MainPage/About';
+import Highlights from '../Components/MainPage/Highlights';
+import Facilities from '../Components/MainPage/Facilities';
+import PreFooter from '../Components/MainPage/PreFooter';
+import Footer from '../Components/Footer';
 
 function Home() {
   return (
@@ -15,7 +15,7 @@ function Home() {
         <main>
           <About />
           <Highlights />
-          <Gatherings />
+          <Facilities />
           <PreFooter />
         </main>
         <footer>

@@ -1,15 +1,15 @@
 import React from 'react';
+import TextCard from '../TextCard';
 
 function Highlights() {
   return (
         <div className="highlights-wrapper">
             <div className="highlights-container">
-                <div className="highlights-desc">
-                    <img src="./images/pattern-divide.svg" alt="Divide"/>
-                    <h2>A few highlights from our menu</h2>
-                    <p>We cater for all dietary requirements, but here’s a glimpse at some of our diner’s favourites. Our menu is revamped every season.</p>
-                </div>
+                <TextCard cardOnBlackBg={true} textCardTitle="A few highlights from our menu" textCardDesc="We cater for all dietary requirements, but here’s a glimpse at some of our diner’s favourites. Our menu is revamped every season." />
+
+                {/* ============================ Products Cards Container ============================ */}
                 <div className="highlights-products">
+                    {/* =============== Card =============== */}
                     <div className="product-card">
                         <picture>
                             <source media="(min-width:768px)" srcSet="./images/salmon-tablet.jpg" />
@@ -20,6 +20,7 @@ function Highlights() {
                             <p>Our locally sourced salmon served with a refreshing buckwheat summer salad.</p>
                         </div>
                     </div>
+                    {/* =============== Card =============== */}
                     <div className="product-card">
                         <picture>
                             <source media="(min-width:768px)" srcSet="./images/beef-tablet.jpg" />
@@ -30,6 +31,7 @@ function Highlights() {
                             <p>Our prime beef served to your taste with a delicious choice of seasonal sides.</p>
                         </div>
                     </div>
+                    {/* =============== Card =============== */}
                     <div className="product-card">
                         <picture>
                             <source media="(min-width:768px)" srcSet="./images/chocolate-tablet.jpg" />
@@ -40,7 +42,9 @@ function Highlights() {
                             <p>Creamy mousse combined with summer fruits and dark chocolate shavings.</p>
                         </div>
                     </div>
+
                 </div>
+
             </div>
         </div>
     );

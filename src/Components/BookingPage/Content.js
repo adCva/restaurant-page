@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '../Button';
 
-function MainRSV() {
+function Content() {
   return (
         <div className="main-rsv-wrapper">
             <div className="main-rsv-container">
@@ -67,4 +67,4 @@ function MainRSV() {
   );
 }
 
-export default MainRSV;
+export default Content;

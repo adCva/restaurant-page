@@ -1,11 +1,8 @@
 import './App.css';
 import "./Scss/style.css";
 import { BrowserRouter, Routes, Route}  from 'react-router-dom';
-
 import Home from './Pages/Home';
-import Reservation from './Pages/Reservation';
-
-
+import Booking from './Pages/Booking';
 
 
 function App() {
@@ -13,7 +10,7 @@ function App() {
     <BrowserRouter  className="App">
       <Routes>
         <Route exact path="/" element={<Home />}/>
-        <Route path="/reservation" element={<Reservation />}/>
+        <Route path="/reservation" element={<Booking />}/>
       </Routes>
     </BrowserRouter>
   );
