@@ -7,7 +7,7 @@ import Booking from './Pages/Booking';
 
 function App() {
   return (
-    <BrowserRouter basename='/app' className="App">
+    <BrowserRouter basename={window.location.pathname || ''} className="App">
       <Routes>
         <Route exact path="/" element={<Home />}/>
         <Route path="/booking" element={<Booking />}/>
