@@ -1165,6 +1165,7 @@ footer {
 @media (min-width: 768px) {
   .booking-content-wrapper .booking-content-container .booking-content .form-and-pattern form {
     width: 550px;
+    padding: 3rem 2rem;
   }
 }
 
@@ -1195,6 +1196,12 @@ footer {
 
 .booking-content-wrapper .booking-content-container .booking-content .form-and-pattern form .form-group:first-of-type {
   margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .booking-content-wrapper .booking-content-container .booking-content .form-and-pattern form .form-group:first-of-type {
+    margin-bottom: 2rem;
+  }
 }
 
 .booking-content-wrapper .booking-content-container .booking-content .form-and-pattern form .form-group input {
@@ -1235,6 +1242,7 @@ footer {
     display: -ms-flexbox;
     display: flex;
     gap: 2rem;
+    margin: 3rem 0 0;
   }
 }
 
@@ -1281,10 +1289,10 @@ footer {
   }
 }
 
-.booking-content-wrapper .booking-content-container .booking-content .form-and-pattern form .form-group-dateTime .date-inputs-container input {
-  width: 100%;
+.booking-content-wrapper .booking-content-container .booking-content .form-and-pattern form .form-group-dateTime .date-inputs-container select {
+  background: transparent;
+  width: 25%;
   color: #5c6779;
-  caret-color: #9e7f66;
   text-align: center;
   font-size: 1.15rem;
   font-weight: 300;
@@ -1297,16 +1305,33 @@ footer {
   transition: all 0.25s ease-in-out;
 }
 
-.booking-content-wrapper .booking-content-container .booking-content .form-and-pattern form .form-group-dateTime .date-inputs-container input:hover {
+.booking-content-wrapper .booking-content-container .booking-content .form-and-pattern form .form-group-dateTime .date-inputs-container select:hover {
   border-bottom: 1px solid #111111;
 }
 
-.booking-content-wrapper .booking-content-container .booking-content .form-and-pattern form .form-group-dateTime .date-inputs-container input:focus {
+.booking-content-wrapper .booking-content-container .booking-content .form-and-pattern form .form-group-dateTime .date-inputs-container select:focus {
   border-bottom: 1px solid #111111;
 }
 
 .booking-content-wrapper .booking-content-container .booking-content .form-and-pattern form .form-group-dateTime .date-inputs-container .input-error {
+  color: #B54949;
   border-bottom: 1px solid #B54949;
+}
+
+.booking-content-wrapper .booking-content-container .booking-content .form-and-pattern form .form-group-time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.booking-content-wrapper .booking-content-container .booking-content .form-and-pattern form .form-group-time .date-inputs-container select {
+  width: 95%;
 }
 
 .booking-content-wrapper .booking-content-container .booking-content .form-and-pattern form .people-select {
