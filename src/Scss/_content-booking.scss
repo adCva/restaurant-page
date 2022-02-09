@@ -314,6 +314,13 @@
                             font-weight: $fw-bold;
                             cursor: pointer;
                             transition: all 0.25s ease-in-out;
+
+                            &:hover {
+                                color: $extra-dark-bg;
+                            }
+                            &:focus {
+                                color: $extra-dark-bg;
+                            }
                         }
     
                         p {

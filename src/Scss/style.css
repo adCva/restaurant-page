@@ -1361,6 +1361,14 @@ footer {
   transition: all 0.25s ease-in-out;
 }
 
+.booking-content-wrapper .booking-content-container .booking-content .form-and-pattern form .people-select button:hover {
+  color: #000000;
+}
+
+.booking-content-wrapper .booking-content-container .booking-content .form-and-pattern form .people-select button:focus {
+  color: #000000;
+}
+
 .booking-content-wrapper .booking-content-container .booking-content .form-and-pattern form .people-select p {
   color: #5c6779;
   font-size: 1.1rem;

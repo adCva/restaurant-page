@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import Button from '../Button';
+import { useTransition, animated } from 'react-spring';
+
 
 function Content() {
     let date = new Date();
@@ -56,6 +58,15 @@ function Content() {
         }
     }
 
+
+
+    // React Spring.
+    const transition = useTransition(errorLocation, {
+        from: { opacity: 0 },
+        enter: { opacity: 1 },
+        leave: { opacity: 0 },
+    });
+
     
     return (
         <div className="booking-content-wrapper">
@@ -77,18 +88,30 @@ function Content() {
                             {/* =================== Name =================== */}
                             <div className="form-group">
                                 <input type="text" name="name" placeholder="Name" className={errorLocation === "name-error" ? "input-error" : ""} />
-                                <p className={errorLocation === "name-error" ? "error-msg show-error-msg" : "error-msg"}>This field is required</p>
+                                {transition((style, errorLocation) => errorLocation ? (
+                                    <animated.p style={style} className={errorLocation === "name-error" ? "error-msg show-error-msg" : "error-msg"}>
+                                        This field is required
+                                    </animated.p>
+                                ) : null)}
                             </div>
                             {/* =================== Email =================== */}
                             <div className="form-group">
                                 <input type="email" name="email" placeholder="Email" className={errorLocation === "email-error" ? "input-error" : ""} />
-                                <p className={errorLocation === "email-error" ? "error-msg show-error-msg" : "error-msg"}>This field is required</p>
+                                {transition((style, errorLocation) => errorLocation ? (
+                                    <animated.p style={style} className={errorLocation === "email-error" ? "error-msg show-error-msg" : "error-msg"}>
+                                        This field is required
+                                    </animated.p>
+                                ) : null)}
                             </div>
                             {/* =================== Date =================== */}
                             <div className="form-group-dateTime">
                                 <div className="group-desc">
                                     <p className="box-label">Pick a date</p>
-                                    <p className={errorLocation === "date-error" ? "error-msg error-msg-dateTime show-error-msg" : "error-msg error-msg-dateTime"}>This field is required</p>
+                                    {transition((style, errorLocation) => errorLocation ? (
+                                        <animated.p style={style} className={errorLocation === "date-error" ? "error-msg error-msg-dateTime show-error-msg" : "error-msg error-msg-dateTime"}>
+                                            This field is required
+                                        </animated.p>
+                                    ) : null)}
                                 </div>
                                 <div className="date-inputs-container">
                                     <select name="day" className={errorLocation === "date-error" ? "input-error" : ""}>
@@ -115,7 +138,11 @@ function Content() {
                             <div className="form-group-dateTime form-group-time">
                                 <div className="group-desc">
                                     <p className="box-label">Pick a time</p>
-                                    <p className={errorLocation === "time-error" ? "error-msg error-msg-dateTime show-error-msg" : "error-msg error-msg-dateTime"}>This field is required</p>
+                                    {transition((style, errorLocation) => errorLocation ? (
+                                        <animated.p style={style} className={errorLocation === "time-error" ? "error-msg error-msg-dateTime show-error-msg" : "error-msg error-msg-dateTime"}>
+                                            This field is required
+                                        </animated.p>
+                                    ) : null)}
                                 </div>
                                 <div className="date-inputs-container">
                                     <select name="hour" className={errorLocation === "time-error" ? "input-error" : ""}>
