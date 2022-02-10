@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/restaurant-page/static/css/main.7bef3519.css",
+    "main.css": "/restaurant-page/static/css/main.20f2b204.css",
     "main.js": "/restaurant-page/static/js/main.4cede1b9.js",
     "static/media/hero-bg-desktop.jpg": "/restaurant-page/static/media/hero-bg-desktop.eb3018c2e6e91c6ac813.jpg",
     "static/media/ready-bg-desktop.jpg": "/restaurant-page/static/media/ready-bg-desktop.1e23bafe314fc43891f6.jpg",
@@ -12,11 +12,11 @@
     "static/media/pattern-curve-bottom-right.svg": "/restaurant-page/static/media/pattern-curve-bottom-right.32e2d12d0b06950515a2.svg",
     "static/media/pattern-curve-top-right.svg": "/restaurant-page/static/media/pattern-curve-top-right.df37c69de72cbd2d4ef2.svg",
     "static/media/pattern-curve-top-left.svg": "/restaurant-page/static/media/pattern-curve-top-left.77f903fbea346f903136.svg",
-    "main.7bef3519.css.map": "/restaurant-page/static/css/main.7bef3519.css.map",
+    "main.20f2b204.css.map": "/restaurant-page/static/css/main.20f2b204.css.map",
     "main.4cede1b9.js.map": "/restaurant-page/static/js/main.4cede1b9.js.map"
   },
   "entrypoints": [
-    "static/css/main.7bef3519.css",
+    "static/css/main.20f2b204.css",
     "static/js/main.4cede1b9.js"
   ]
 }
