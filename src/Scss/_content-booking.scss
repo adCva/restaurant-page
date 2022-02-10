@@ -1,14 +1,14 @@
 .booking-content-wrapper {
     background: url("../Assets/ready-bg-mobile.jpg") top/cover no-repeat;
-    height: 90vh;
+    height: 550px;
 
     @media (min-width: 768px) {
         background: url("../Assets/ready-bg-tablet.jpg") center/cover no-repeat; 
-        height: 60vh;
+        height: 640px;
     }
     @media (min-width: 1200px) {
         background: url("../Assets/ready-bg-desktop.jpg") center/cover no-repeat; 
-        height: 70vh;
+        height: 700px;
     }
 
 

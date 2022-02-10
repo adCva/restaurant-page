@@ -139,7 +139,7 @@ header {
 @media (min-width: 1100px) {
   header {
     background: url("../Assets/hero-bg-desktop.jpg") top/cover no-repeat;
-    height: 88vh;
+    height: 800px;
   }
 }
 
@@ -149,18 +149,18 @@ footer {
 }
 
 .decoration-wrapper {
-  height: 630px;
+  height: 550px;
 }
 
 @media (min-width: 768px) {
   .decoration-wrapper {
-    height: 550px;
+    height: 520px;
   }
 }
 
 @media (min-width: 850px) {
   .decoration-wrapper {
-    height: 600px;
+    height: 550px;
   }
 }
 
@@ -755,6 +755,8 @@ footer {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    width: 600px;
+    margin: 0 auto;
   }
 }
 
@@ -770,6 +772,7 @@ footer {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
+    width: auto;
     margin-top: 5rem;
   }
 }
@@ -1015,20 +1018,20 @@ footer {
 
 .booking-content-wrapper {
   background: url("../Assets/ready-bg-mobile.jpg") top/cover no-repeat;
-  height: 90vh;
+  height: 550px;
 }
 
 @media (min-width: 768px) {
   .booking-content-wrapper {
     background: url("../Assets/ready-bg-tablet.jpg") center/cover no-repeat;
-    height: 60vh;
+    height: 640px;
   }
 }
 
 @media (min-width: 1200px) {
   .booking-content-wrapper {
     background: url("../Assets/ready-bg-desktop.jpg") center/cover no-repeat;
-    height: 70vh;
+    height: 700px;
   }
 }
 
